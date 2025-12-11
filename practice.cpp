@@ -2,19 +2,17 @@
 #include <string>
 using namespace std;
 
-class product{
+class sum{
     public:
-    string company;
-    int variant;
-     product(int variant){
-        company="apple";
-        this->variant=variant;
+    sum(int a,int b){
+        cout<<a+b<<endl;
+    }
+    sum(int a,int b,int c){
+        cout<<a+b+c<<endl;
     };
 };
-
 int main(){
-    product iphone(15);
-    cout<<iphone.company;
-    cout<<iphone.variant;
-    
+    sum s1(3,6);
+    sum s2(4,36,6);
+
 }
