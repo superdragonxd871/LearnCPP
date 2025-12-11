@@ -5,13 +5,16 @@ using namespace std;
 class product{
     public:
     string company;
-     product(){
+    int variant;
+     product(int variant){
         company="apple";
+        this->variant=variant;
     };
 };
 
 int main(){
-    product iphone;
+    product iphone(15);
     cout<<iphone.company;
+    cout<<iphone.variant;
     
 }
