@@ -2,17 +2,35 @@
 #include <string>
 using namespace std;
 
-class sum{
+class parent{
     public:
-    sum(int a,int b){
-        cout<<a+b<<endl;
+    string name;
+    int age;
+    void setparent(string name,int age){
+        this->name=name;
+        this->age=age;
     }
-    sum(int a,int b,int c){
-        cout<<a+b+c<<endl;
+    void getparent(){
+        cout<<name<<endl;
+        cout<<age<<endl;
+    }
+};
+class child:public parent{
+    public:
+    string work;
+    void setchild(string name,int age,string work){
+        this->name=name;
+        this->age=age;
+        this->work=work;
+    }
+    void getchild(){
+        cout<<name<<endl;
+        cout<<age<<endl;
+        cout<<work<<endl;
     };
 };
 int main(){
-    sum s1(3,6);
-    sum s2(4,36,6);
-
+    child c1;
+    c1.setchild("sourabh",21,"student");
+    c1.getchild();
 }
